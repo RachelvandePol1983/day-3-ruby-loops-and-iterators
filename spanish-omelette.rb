@@ -115,3 +115,16 @@ def ask_if_ready(step, index)
 
   answer.upcase == 'Y'
 end
+
+steps.each_with_index do |step, index|
+  print_divider
+
+  loop do
+    ready = ask_if_ready(step, index)
+    break if ready
+
+    puts "Ok, I will give you some extra time."
+  end
+
+  send(step[:action])
+end
