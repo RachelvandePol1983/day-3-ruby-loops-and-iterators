@@ -71,7 +71,7 @@ steps.each_with_index do |step, index|
 end
 
 def generic_recipe_step
-  Puts "On it!"
+  puts "On it!"
   print_progress_bar
 end
 
